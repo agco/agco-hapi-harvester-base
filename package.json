@@ -1,0 +1,35 @@
+{
+  "name": "agco-hapi-base",
+  "engines": {
+    "node": "6.2.1"
+  },
+  "version": "0.0.0",
+  "description": "Forkable base hapi app for AGCO",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "mocha": "./node_modules/.bin/mocha",
+    "test": "npm run lint && npm run mocha"
+  },
+  "keywords": [
+    "hapi",
+    "agco"
+  ],
+  "author": "Braden O'Guinn",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.21.0",
+    "hapi": "^15.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.2.0",
+    "eslint-config-agco": "0.0.6",
+    "eslint-plugin-import": "^1.4.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-perf-standard": "^1.0.3",
+    "eslint-plugin-react": "^4.3.0",
+    "inject-then": "^2.0.7",
+    "mocha": "^3.1.2"
+  }
+}
