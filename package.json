@@ -1,7 +1,7 @@
 {
   "name": "agco-hapi-base",
   "engines": {
-    "node": "6.2.1"
+    "node": "6.9"
   },
   "version": "0.0.0",
   "description": "Forkable base hapi app for AGCO",
