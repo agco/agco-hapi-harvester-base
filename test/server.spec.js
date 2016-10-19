@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const startServer = require('../index');
+const startServer = require('../app');
 
 describe('The server is running', () => {
   let server;
