@@ -1,10 +1,10 @@
 {
-  "name": "agco-hapi-base",
+  "name": "fuse-topcon-adapter",
   "engines": {
     "node": "6.2.1"
   },
   "version": "0.0.0",
-  "description": "Forkable base hapi app for AGCO",
+  "description": "Fuse ingestion layer from Topcon traffic",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
