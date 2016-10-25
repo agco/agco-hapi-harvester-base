@@ -1,10 +1,10 @@
 {
-  "name": "agco-hapi-base",
+  "name": "fuse-gateway-adapter",
   "engines": {
     "node": "6.9"
   },
   "version": "0.0.0",
-  "description": "Forkable base hapi app for AGCO",
+  "description": "Adapter for Gateway data before ingestion",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
