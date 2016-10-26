@@ -1,0 +1,39 @@
+db:
+  image: mongo:2.6.8
+  expose:
+    - "27017"
+  command: mongod --smallfiles --replSet "test"
+dbConfig:
+  image: mongo:2.6.8
+  command: bash -c "sleep 5 && mongo db/local --eval 'printjson(rs.initiate())' && tail -f /dev/null"
+  links:
+    - db
+es:
+  image: elasticsearch:2.3.3
+  expose:
+    - "9200"
+    - "9300"
+rd:
+  image: redis
+  expose:
+    - "6379"
+rb:
+  image: andrewkeig/rabbitmq-mqtt-enabled
+  expose:
+    - "15672"
+    - "5672"
+    - "1883"
+web:
+  build: .
+  command: bash -c 'sleep 15 && npm run-script bamboo'
+  environment:
+    NODE_ENV: "local"
+    CLOUDAMQP_URL_ISOLATED: "amqp://guest:guest@rb:5672"
+  links:
+    - db
+    - es
+    - rb
+    - rd
+    - dbConfig
+  volumes:
+    - .:/output
